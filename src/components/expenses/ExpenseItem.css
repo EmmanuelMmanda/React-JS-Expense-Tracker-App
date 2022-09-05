@@ -1,0 +1,29 @@
+.ExpenseItem_Main {
+    background-color: rgb(209, 209, 209);
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: ROW;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    margin: auto;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ExpenseItem_Title {
+    font-size: 18px;
+    font-weight: lighter;
+    align-self: center;
+}
+.ExpenseItem_Price {
+    padding: 5px;cursor: pointer;
+    align-self: center;
+    border-radius: 10px;
+    background: linear-gradient(rgb(228, 97, 97),rgb(231, 135, 135));
+    font-size: 17px;
+    color: rgb(37, 37, 37);
+}
+

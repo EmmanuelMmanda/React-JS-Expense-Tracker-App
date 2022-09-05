@@ -1,0 +1,23 @@
+.ExpenseItem_Date {
+    padding: 5px;
+    align-self: center;
+    background-color: rgba(232, 221, 221, 0.4);
+    padding: 3px;
+    display: flex;
+    gap: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: rgb(171, 170, 170);
+    
+}
+.ExpenseItem_Date :nth-child(2){
+    text-align: center;
+    font-size: 17px;
+    align-self: center;
+}
+.ExpenseItem_Date> :nth-child(1){
+    text-align: center;
+    align-self: center;
+    font-size: 35px;
+   
+}

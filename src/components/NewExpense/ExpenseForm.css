@@ -1,0 +1,46 @@
+ form {
+    display: inline-block;
+    justify-content: center;
+    position: relative;
+    padding : 30px;
+    padding-bottom: 70px;
+    background-color: rgb(171, 171, 171);
+    border-radius: 20px;
+}
+.Date_Box> input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+}
+.Item_Box> input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+}
+.Price_Box> input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+}
+.Date_Box,.Item_Box, .Price_Box {
+    margin: 10px;font-size: 20px;
+    display: inline;
+}
+ form button{
+    color:rgb(20, 20, 20);
+    background-color: rgb(234, 127, 108);
+    display: block;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    font-size: 17px;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    right: 10px;
+}
