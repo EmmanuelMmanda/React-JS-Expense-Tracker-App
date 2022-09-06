@@ -1,15 +1,16 @@
-# Getting Started with Create React App
+# Getting Started with Expense Tracker App using React Js.
 <img src="./trackerintro.PNG" width="100%"/>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory after Cloning, you can run:
-### `npm install`  To Install dependancies.
+In the project directory after Cloning, you can run on your Terminal:
+
+  To Install dependancies. `npm install`
 
 
-### then Run `npm start`
+  To start Server Run `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
