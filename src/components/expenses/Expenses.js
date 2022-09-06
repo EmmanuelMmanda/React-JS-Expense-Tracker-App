@@ -1,55 +1,46 @@
+import { useState } from "react";
+import ExpenseFilter from "./ExpenseFilter";
 import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
+import ExpensesCHart from "./ExpensesChart";
 
 export default function Expenses(props) {
-  const Expense = [
-    {
-      id: 1,
-      date: new Date(2021, 5, 21),
-      Price: 666,
-      Item: "Buying A Lamborghini",
-    },
-    {
-      id: 2,
-      date: new Date(2021, 5, 21),
-      Price: 543,
-      Item: "Car wash Services",
-    },
-    {
-      id: 3,
-      date: new Date(2021, 5, 22),
-      Price: 777,
-      Item: "Buying a Market Stock",
-    },
-    {
-      id: 4,
-      date: new Date(2021, 5, 31),
-      Price: 611,
-      Item: "Buying A Guiter",
-    },
-  ];
+  const ExpenseObject = props.ExpensesProp;
+
+  const [FilterYear, setFilterYear] = useState("2020");
+  const ChangeYearHandler = (selectedYear) => {
+    setFilterYear(selectedYear);
+  };
+
+  const FilteredExpenses = ExpenseObject.filter((myexpense) => {
+    return myexpense.date.getFullYear().toString() === FilterYear;
+  });
+
+
   return (
     <div className="ExpensesTab">
-      <ExpenseItem
-        date={Expense[0].date}
-        Price={Expense[0].Price}
-        Item={Expense[0].Item}
-      />
-      <ExpenseItem
-        date={Expense[1].date}
-        Price={Expense[1].Price}
-        Item={Expense[1].Item}
-      />
-      <ExpenseItem
-        date={Expense[2].date}
-        Price={Expense[2].Price}
-        Item={Expense[2].Item}
-      />
-      <ExpenseItem
-        date={Expense[3].date}
-        Price={Expense[3].Price}
-        Item={Expense[3].Item}
-      />
+      <ExpenseFilter selected={FilterYear} onChangeYear={ChangeYearHandler} />
+
+      <ExpensesCHart expenses={FilteredExpenses}/>
+      {/* 
+        ---first Mthod --
+      {FilteredExpenses.length === 0 ? (
+        <p className="Item_text">No Item Found</p>
+      ) : (
+        <p className="Item_text">We found {FilteredExpenses.length} items </p>
+      )} */}
+      {FilteredExpenses.length === 0 && (
+        <p className="Item_text">No Item Found</p>
+      )}
+      {FilteredExpenses.length > 0 &&
+        FilteredExpenses.map((expense) => (
+          <ExpenseItem
+            key={expense.id}
+            date={expense.date}
+            Price={expense.Price}
+            Item={expense.Item}
+          />
+        ))}
     </div>
   );
 }

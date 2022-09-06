@@ -3,3 +3,14 @@
   display: flex;
   justify-content: center;
 }
+.Large_Form_Btn {
+  background-color: rgb(192, 84, 84);
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  width: 500px;
+  border: 0.5px solid;
+  border-color: rgb(177, 120, 120);
+}

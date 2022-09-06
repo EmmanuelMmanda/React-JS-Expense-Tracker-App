@@ -1,0 +1,9 @@
+.Chart{
+    background-color: rgb(226, 226, 226);
+    padding: 10px;
+    height: 130px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}

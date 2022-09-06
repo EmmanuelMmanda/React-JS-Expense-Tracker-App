@@ -1,0 +1,27 @@
+.Chart_Bar {
+    height: 80%;
+    padding: 8px;
+}
+.ChartBarFill_Constainer {
+    width: 20px;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid rgb(182, 80, 80);
+    position: relative;
+    text-align: center;
+}
+
+.ChartBar_Fill {
+    border-radius: 3px;
+    align-self: flex-end;
+    background-color:rgb(197, 154, 154);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 100%;
+    padding: 0px;
+     /* Dafault Chart Fill */
+     transition: height(0.5s);
+}
